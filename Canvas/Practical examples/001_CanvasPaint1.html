@@ -5,9 +5,7 @@
 	<script type="text/javascript">
 		window.addEventListener("load", init, false);
 
-		var started = false,
-			canvas,
-			context;
+		var started = false,canvas,context;
 
 		function init() {
 			canvas = document.getElementById("canvas");
@@ -28,7 +26,7 @@
 				y = e.offsetY;
 			}
 
-			if (!started) {
+			if (!started) { // Срабатывает только сначала
 				context.beginPath();
 				context.moveTo(x, y);
 				started = true;

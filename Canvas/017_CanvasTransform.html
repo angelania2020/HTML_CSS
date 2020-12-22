@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>rotate transformation</title>
+	<script type="text/javascript">
+		function loadHandler() {
+			// функция для получения элементов по id
+			var $ = function(id) {
+				return document.getElementById(id);
+			}
+
+			// контекст для canvas
+			var context = $("canvas").getContext("2d");
+
+			var img = new Image();
+			img.src = "logo.png";
+			img.onload = draw;
+			$("btn").onclick = draw;
+
+			function draw() {
+				// очистка всего полотна.
+				context.clearRect(0,0,context.canvas.width, context.canvas.height);
+
+				var a = $("a").value;
+				var b = $("b").value;
+				var c = $("c").value;
+				var d = $("d").value;
+				var tx = $("tx").value;
+				var ty = $("ty").value;
+
+				// сохранение состояния полотна и начала системы координат.
+				context.save();
+				// перемещение
+				context.translate(100,100);
+				// трансформация
+				context.transform(a,b,c,d,tx,ty);
+				// пример
+				context.transform(0.866,-0.5,0.866,0.5,0,0)
+				context.drawImage(img,0,0,100,100);
+				// восстановление сохраненного полотна
+				context.restore();
+			}
+		}
+
+		if (window.addEventListener)
+			window.addEventListener("load", loadHandler, true);
+	</script>
+</head>
+<body>
+	<canvas id="canvas" height="300" width="300" style="border: solid 1px black;">
+	</canvas>
+	<div style="border: 1px solid gray; padding: 8px; margin: 8px;">
+		Масштаб X
+		<input type="text" id="a" value="1" /><br>
+		Искривление по Y
+		<input type="text" id="b" value="0" /><br>
+		Искривление по X
+		<input type="text" id="c" value="0" /><br>
+		Масштаб Y
+		<input type="text" id="d" value="1" /><br>
+		Перемещение X
+		<input type="text" id="tx" value="0" /><br>
+		Перемещение Y
+		<input type="text" id="ty" value="0" /><br>
+		<input type="button" id="btn" value="transform" />
+	</div>
+</body>
+</html>
