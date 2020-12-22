@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS3 Combinators</title>
+	
+	<style>
+
+		/*
+			Получение p, который сразу следует за h2.
+		*/
+		h2 + p {
+			margin:10px;
+			border:1px solid green;
+		}
+
+	</style>
+</head>
+<body>
+	<h2>Hello</h2>
+	<p>world</p><!--Данный элемент будет выбран селектором-->
+
+	<h2>Hello</h2>
+	<p>world</p><!--Данный элемент будет выбран селектором-->
+
+	<p>Hello</p>
+	<h2>world</h2>
+
+	<a href="http://www.w3.org/TR/selectors/">CSS3 Selectors</a>
+</body>
+</html>

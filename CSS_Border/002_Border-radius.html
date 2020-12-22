@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>border-radius</title>
+	<style>
+		#id1, #id2, #id3, #id4 {
+			float: left;
+			border: 2px #000000 solid;
+			padding: 10px;
+			width: 300px;
+			height: 100px;
+			margin: 20px;
+			background-color: #ccc;
+			color: #FFF;
+			font-weight: bold;
+		}
+		#id1 {
+			/* border-radius задает радиус скругления углов рамки. Также действует на фон.*/
+			border-top-left-radius: 20px;
+		}
+		#id2 {
+			border-top-right-radius: 20px;
+		}
+		#id3 {
+			border-bottom-left-radius: 20px;
+		}
+		#id4 {
+			border-bottom-right-radius: 20px;
+		}
+		span {
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<p id="id1">
+		<span>border-top-left-radius: 20px</span>
+	</p>
+	<p id="id2">
+		<span>border-top-right-radius: 20px</span>
+	</p>
+	<div style="clear:both;"></div>
+	<p id="id3">
+		<span>border-bottom-left-radius: 20px</span>
+	</p>
+	<p id="id4">
+		<span>border-bottom-right-radius: 20px</span>
+	</p>
+</body>
+</html>

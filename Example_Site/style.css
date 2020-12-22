@@ -8,20 +8,20 @@ body
 }
 header
 {
-	display:black;
-	background-color: Orange;
-	color:White;
+	display:block;
+	background-color: orange;
+	color:white;
 	text-align:center;
 }
 h3
 {
-	color:Orange
+	color:orange;
 	text-align:center;
 }
 h4
 {
-	color:Orange;
-	background-color: White;
+	color:orange;
+	background-color: white;
 	-webkit-transform: rotate(-45deg);
 	-moz-transform:rotate(-45deg);
 	text-align:left;
@@ -76,12 +76,13 @@ aside
 aside p
 {
 	margin:15px;
+	text-align:center;
 }
 footer
 {
 	clear:both;
 	color:white;
-	background-color:Orange;
+	background-color:orange;
 	text-align:center;
 	padding:15px;
 }
