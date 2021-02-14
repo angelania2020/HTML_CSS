@@ -1,0 +1,21 @@
+.row {
+	background: #e3de4d;
+	height: 300px;
+}
+
+.row div{
+	height: 100px;
+}
+
+.row div:nth-child(odd){
+	background: #4e45c6;
+}
+
+.row div:nth-child(even){
+	background: #51c645;
+}
+
+.col-2 {
+	margin: auto;
+	text-align: center;
+}
